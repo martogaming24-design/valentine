@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine 💘</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      color: #fff;
+    }
+
+    button {
+      font-size: 1.2rem;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    #yes {
+      background-color: #28a745;
+      color: white;
+      margin-right: 20px;
+    }
+
+    #no {
+      background-color: #dc3545;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>
+      Емче мое најсакано, чест и задоволство ми е секој ден да го споделувам со тебе, а нормално би сакал и денот на вљубените да биде еден наш посебен ден. По повод оваа прилика, те прашувам: <br><br>
+      <strong>Will you be my Valentine? 💘</strong>
+    </h1>
+    <button id="yes" onclick="yesClicked()">Yes ❤️</button>
+    <button id="no">No 💔</button>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("no");
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+      const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    });
+
+    function yesClicked() {
+      document.body.innerHTML = `
+        <h1 style="
+          color: white;
+          font-size: 2rem;
+          text-align: center;
+          margin-top: 20vh;
+        ">
+          YAAAY 💖🥰  
+          Best Valentine ever!
+        </h1>
+      `;
+    }
+  </script>
+
+</body>
+</html>
